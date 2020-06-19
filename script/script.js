@@ -5,7 +5,7 @@ function userProgress(time) {
 	let intervalId = setInterval(function () {
 		if (start > 80) {
 			clearInterval(intervalId);
-			chang();
+			// chang();
 		}
 		else {
 			progressElement.value = start;
@@ -67,3 +67,47 @@ function userProgress4(time) {
 	}, timer);
 } 
 userProgress4(1);
+
+
+let progress = document.querySelector('.progress');
+
+window.addEventListener('scroll', progressBar);
+
+function progressBar(e) {
+	let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+	let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	let per = windowScroll / windowHeight * 100;
+	progress.style.width = per + '%';
+	console.log(progress)
+}
+
+$(document).ready(function(){
+	$(".projects__slide").owlCarousel({
+		loop: true,
+		margin: 100,
+		items: 3,
+		nav: true,
+		dots: true,
+		responsiveClass: true,
+		responsive: {
+			0: {
+				items: 1,
+				nav: true
+			},
+			600: {
+				items: 2,
+				margin: 10,
+				
+				
+			},
+			800: {
+				items: 3,
+				margin: 30,
+			},
+			1025: {
+				items: 3,
+				margin: 50,
+			}
+		}
+	})
+});
