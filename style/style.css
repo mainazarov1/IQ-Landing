@@ -436,6 +436,6 @@ progress::-webkit-progress-value {
 		width: 180%;
 	}
 	.projects__slide {
-    padding: 0 0 50px;
+    padding: 0 0 0px;
 	}
 }
