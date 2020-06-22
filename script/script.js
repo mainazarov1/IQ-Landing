@@ -86,7 +86,7 @@ $(document).ready(function(){
 		loop: true,
 		margin: 100,
 		items: 3,
-		nav: true,
+		nav: false,
 		dots: true,
 		responsiveClass: true,
 		responsive: {
