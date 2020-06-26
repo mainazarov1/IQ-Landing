@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>iQ</title>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./style/owl.carousel.min.css">
 	<link rel="stylesheet" href="./style/owl.theme.default.min.css">
 	<link rel="stylesheet" href="./style/style.css">
@@ -35,12 +36,15 @@
 			<div class="main__content">
 				<h1 class="main__title"> Веб студия iQ </h1>
 				<p class="main__text">Специализируемся на разработке сайтов</br> в Кыргызстане и во всех странах СНГ</p>
-				<a href="" class="main__btn">Узнать Больше</a>
+				<a href="#direction" class="main__btn">Узнать Больше</a>
 			</div>
 			<img src="./images/mobile.png" alt="">
 	</section>
-	<section class="direction container">
-			<div class="direction__box">
+	<section class="direction container" id="direction">
+			<h3 class="title">Наша команда</h3>
+			<h2 class="heading">Разрабатывает</h2>
+			<div class="direction__content">
+				<div class="direction__box">
 				<h3 class="title">ЧТО МЫ ДЕЛАЕМ</h3>
 				<h2 class="heading">Проекты любой сложности</h2>
 				<p class="text">Мы создаем продукт максимально соответствующий вашим желаниям. Вы получите продукт готовый к использованию с первой минуты.</p>
@@ -56,6 +60,8 @@
 				</div>
 			</div>
 			<img src="./images/process.png" alt="">
+			</div>
+
 		</div>
 	</section>
 	<section class="about">
@@ -127,7 +133,7 @@
 			<div class="projects__slide owl-carousel owl-theme">
 				<div class="projects__item">
 					<a href="">
-						<img class=".projects__image" src="./images/тоголок.jpeg" alt="">
+						<img class="projects__image" src="./images/тоголок.jpeg" alt="">
 						<div class="projects__desc">
 							<h4>SSS</h4>
 							<p>sss</p>
@@ -136,7 +142,7 @@
 				</div>
 				<div class="projects__item">
 					<a href="">
-						<img class=".projects__image" src="./images/проект2.jpeg" alt="">
+						<img class="projects__image" src="./images/проект2.jpeg" alt="">
 						<div class="projects__desc">
 							<h4>SSS</h4>
 							<p>sss</p>
@@ -145,7 +151,7 @@
 				</div>
 				<div class="projects__item">
 					<a href="">
-						<img class=".projects__image" src="./images/проект3.jpeg" alt="">
+						<img class="projects__image" src="./images/проект3.jpeg" alt="">
 						<div class="projects__desc">
 							<h4>SSS</h4>
 							<p>sss</p>
@@ -154,7 +160,7 @@
 				</div>
 				<div class="projects__item">
 					<a href="">
-						<img class=".projects__image" src="./images/проект4.jpeg" alt="">
+						<img class="projects__image" src="./images/проект4.jpeg" alt="">
 						<div class="projects__desc">
 							<h4>SSS</h4>
 							<p>sss</p>
@@ -163,7 +169,7 @@
 				</div>
 				<div class="projects__item">
 					<a href="">
-						<img class=".projects__image" src="./images/проект5.jpeg" alt="">
+						<img class="projects__image" src="./images/проект5.jpeg" alt="">
 						<div class="projects__desc">
 							<h4>SSS</h4>
 							<p>sss</p>
@@ -172,7 +178,7 @@
 				</div>
 				<div class="projects__item">
 					<a href="">
-						<img class=".projects__image" src="./images/проект6.jpeg" alt="">
+						<img class="projects__image" src="./images/проект6.jpeg" alt="">
 						<div class="projects__desc">
 							<h4>SSS</h4>
 							<p>sss</p>
@@ -181,7 +187,7 @@
 				</div>
 				<div class="projects__item">
 					<a href="">
-						<img class=".projects__image" src="./images/проект7.jpeg" alt="">
+						<img class="projects__image" src="./images/проект7.jpeg" alt="">
 						<div class="projects__desc">
 							<h4>SSS</h4>
 							<p>sss</p>
@@ -190,7 +196,7 @@
 				</div>
 				<div class="projects__item">
 					<a href="">
-						<img class=".projects__image" src="./images/проект8.jpeg" alt="">
+						<img class="projects__image" src="./images/проект8.jpeg" alt="">
 						<div class="projects__desc">
 							<h4>SSS</h4>
 							<p>sss</p>
@@ -199,7 +205,7 @@
 				</div>
 				<div class="projects__item">
 					<a href="">
-						<img class=".projects__image" src="./images/проект9.jpeg" alt="">
+						<img class="projects__image" src="./images/проект9.jpeg" alt="">
 						<div class="projects__desc">
 							<h4>SSS</h4>
 							<p>sss</p>
@@ -250,15 +256,16 @@
 	</section>
 	<section class="feedback">
 		<div class="container">
-			<div class="feedback__content">
+			<form class="feedback__content">
 				<div class="feedback__box">
 					<h2 class="feedback__title">Оставьте заявку и получите домен + хостинг в подарок</h2>
 					<input type="name" placeholder="Имя">
 					<input type="email" placeholder="E-mail">
+					<input type="tel" pattern="[0-9]{6,14}" placeholder="Телефон">
 					<button class="btn">Отправить</button>
 				</div>
 				<img src="./images/ia_callbackmanager_img2.png" alt="">
-			</div>
+			</form>
 
 		</div>
 	</section>

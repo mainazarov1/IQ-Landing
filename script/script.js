@@ -84,10 +84,12 @@ function progressBar(e) {
 $(document).ready(function(){
 	$(".projects__slide").owlCarousel({
 		loop: true,
-		margin: 100,
+		center: true,
 		items: 3,
 		nav: false,
 		dots: true,
+		autoplay: true,
+		autoplayTimeout: 4000,
 		responsiveClass: true,
 		responsive: {
 			0: {
