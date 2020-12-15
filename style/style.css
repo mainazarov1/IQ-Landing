@@ -80,6 +80,7 @@ body {
 .header__contacts li a{
 	font-size: 20px;
 	color: rgba(255, 255, 255, 0.8);
+	transition: all .15s ease;
 }
 .header__contacts li:hover a{
 	color: #1e90ff;
@@ -97,7 +98,8 @@ body {
 	height: 33px;
 	filter: hue-rotate(200);
 	box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
-	border-radius: 50%;
+	/* border-radius: 50%; */
+	transition: all .15s ease;
 }
 .header__socials a:hover img {
 	transform: scale(1.05);
@@ -130,24 +132,83 @@ body {
 .main__title {
 	font-family: 'Lato', sans-serif;
 	font-size: calc(100vw / 18);
-	text-shadow: -3px 6px 9px rgba(0, 0, 0, 0.2);
+	/* text-shadow: -3px 6px 9px rgba(0, 0, 0, 0.2); */
+	transform: translate(0, 120%);
+	opacity: 0;
+	transition: all .8s ease 0s;
+	position: relative;
+	-webkit-text-stroke: 2px #000;
+	color: transparent;
+}
+.main__title._active {
+	transform: translate(0, 0);
+	opacity: 1;
+}
+.main__title span {
+	font-style: italic;
+	font-weight: 600;
+}
+.main__title span:before {
+	content: '';
+	position: absolute;
+	bottom: 12px;
+	right: -5px;
+	width: 90px;
+	height: 10px;
+	background-color: crimson;
+	z-index: -1;
+	transition: .2s;
+	/* transform: skewX(0deg); */
+}
+.main__title:hover span:before{
+	bottom: -5px;
+	right: -10px;
+	height: 100%;
+	width: 90px;
+	transform: skewX(-7deg);
 }
 .main__text {
 	font-size: calc(100vw / 48);
 	margin: 10px 0 60px;
+	transform: translate(0, 120%);
+	opacity: 0;
+	transition: all .8s ease .3s;
+}
+.main__text._active {
+	transform: translate(0, 0);
+	opacity: 1;
 }
 .main__btn {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	min-width: 250px;
-	background-color: #1e90ff;
-	padding: 15px 30px;
+	height: 75px;
+	/* border: 1px solid #000; */
+	/* background-color: #1e90ff; */
+	/* padding: 15px 30px; */
 	font-size: 25px;
 	color: #fff;
-	border-radius: 7px;
+	border-radius: 50px;
+	position: relative;
+	color: #000;
 }
-.main__btn:hover {
+.main__btn:before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 10px;
+	width: 75px;
+	height: 75px;
+	border-radius: 50px;
+	background-color: crimson;
+	z-index: -1;
+	transition: all .5s ease 0s;
+}
+.main__btn:hover:before {
 	background-color: #1e9fff;
+	width: 230px;
+	border-radius: 50px;
 }
 .direction {
 	display: flex;
@@ -215,6 +276,25 @@ body {
 	margin: 10px;
 	border-radius: 50px;
 	margin-left: 0px;
+	transform: translate(-100%,0);
+	opacity: 0;
+	transition: all 1s ease 0s;
+}
+#progress {
+	transition: .8s ease 0s;
+}
+#progress2 {
+	transition: .8s ease .2s;
+}
+#progress3 {
+	transition: .8s ease .4s;
+}
+#progress4 {
+	transition: .8s ease .6s;
+}
+.percent__progress._active {
+	transform: translate(0, 0);
+	opacity: 1;
 }
 progress::-webkit-progress-bar {
 	background-color: #FAECF2;
@@ -232,6 +312,13 @@ progress::-webkit-progress-value {
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 	padding: 50px 0;
+	transform: translate(0, 20%);
+	opacity: 0;
+	transition: .8s ease-in-out .2s;
+}
+.about__box._active {
+	transform: translate(0, 0);
+	opacity: 1;
 }
 .about__item {
 	width: 30%;
@@ -250,9 +337,12 @@ progress::-webkit-progress-value {
 	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
 	transition: .3s;
 }
-.about__item:hover .about__icon{
+.about__item:hover .about__icon {
 	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
 	background-color: #1e90ff;
+}
+.about__item:hover h4 {
+	color: #1e90ff;
 }
 .about__item img {
 	width: 50px;
@@ -261,8 +351,9 @@ progress::-webkit-progress-value {
 }
 .about__item:hover .about__icon img{
 	filter: invert(2);
-	width: 55px;
-	height: 55px;
+	/* width: 55px;
+	height: 55px; */
+	transform: scale(.9);
 }
 
 .about__item-content {
@@ -287,6 +378,13 @@ progress::-webkit-progress-value {
 .projects__slide {
 	padding: 30px 50px 100px;
 	justify-content: center;
+	transform: translate(50%, 0);
+	opacity: 0;
+	transition: .8s ease .3s;
+}
+.projects__slide._active {
+	transform: translate(0, 0);
+	opacity: 1;
 }
 .projects__item {
 	overflow: hidden;
@@ -375,8 +473,9 @@ progress::-webkit-progress-value {
 }
 .process__item:hover img {
 	filter: invert(2);
-	width: 53px;
-	height: 53px;
+	/* width: 53px;
+	height: 53px; */
+	transform: scale(.9);
 }
 .process__item-content {
 	margin-left: 25px;
@@ -384,6 +483,9 @@ progress::-webkit-progress-value {
 .content h4 {
 	font-size: 22px;
 	margin-bottom: 10px;
+}
+.content:hover h4 {
+	color: #1e90ff;
 }
 .feedback {
 	width: 100%;
